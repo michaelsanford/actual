@@ -13,6 +13,12 @@ terraform {
 
 provider "aws" {
   region = var.region
+
+  default_tags {
+    tags = {
+      "actual-budget" = var.namespace
+    }
+  }
 }
 
 provider "time" {}

@@ -12,7 +12,8 @@ on AWS using Fargate and an Aurora Serverless v2 database.
 ```
 
 Each module is namespaced using the `namespace` variable so multiple
-stacks can coexist within the same AWS account.
+stacks can coexist within the same AWS account. All AWS resources are
+tagged with `actual-budget=<namespace>` via provider default tags.
 
 Run `terraform init` and `terraform apply` inside this directory to deploy.
 
