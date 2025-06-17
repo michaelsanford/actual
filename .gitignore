@@ -49,6 +49,9 @@ bundle.mobile.js.map
 # Misc
 .#*
 
+# Terraform
+.terraform/
+
 # Local Netlify folder
 .netlify
 

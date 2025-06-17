@@ -52,7 +52,3 @@ module "ecs" {
 output "service_name" {
   value = module.ecs.service_name
 }
-
-output "alb_dns_name" {
-  value = module.ecs.alb_dns_name
-}

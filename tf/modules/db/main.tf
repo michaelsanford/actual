@@ -26,7 +26,7 @@ resource "aws_rds_cluster" "this" {
   master_username    = var.db_username
   master_password    = random_password.db.result
   database_name      = "actual"
-  db_subnet_group_name = aws_rds_subnet_group.this.name
+  db_subnet_group_name = aws_db_subnet_group.this.name
   vpc_security_group_ids = [aws_security_group.db.id]
 
   serverlessv2_scaling_configuration {
@@ -43,7 +43,7 @@ resource "aws_rds_cluster_instance" "this" {
   engine              = aws_rds_cluster.this.engine
 }
 
-resource "aws_rds_subnet_group" "this" {
+resource "aws_db_subnet_group" "this" {
   name       = "${var.namespace}-subnets"
   subnet_ids = var.subnets
 }
