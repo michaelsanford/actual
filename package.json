@@ -97,7 +97,7 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@4.9.1",
+  "packageManager": "yarn@4.9.4",
   "browserslist": [
     "electron 24.0",
     "defaults"
